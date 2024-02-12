@@ -24,6 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { ProductsComponent } from './Pages/products/products.component';
 
+import { AddtoCartComponent } from './Pages/addto-cart/addto-cart.component';
+
 
 
 @NgModule({
@@ -45,6 +47,8 @@ import { ProductsComponent } from './Pages/products/products.component';
     WishlistComponent,
     ProductDescriptionComponent,
     ProductsComponent,
+  
+    AddtoCartComponent,
    
    
   ],

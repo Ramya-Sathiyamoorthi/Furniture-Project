@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormControlName, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 
@@ -14,7 +14,17 @@ import { ProductsService } from 'src/app/service/products.service';
 export class ProductsComponent implements OnInit {
 
   apiUrl = 'http://localhost:3000/products';
-  disc5 : any = new FormControl('');
+  // discounts : any = new FormGroup({
+  //   disc5 : new FormControl(''),
+  //   disc10 : new FormControl('')
+  // });
+
+  disc5 = false;
+  disc10 = false;
+  disc20 = false;
+  disc30 = false;
+  disc40 = false;
+  disc50 = false;
 
   constructor(config: NgbRatingConfig, private productService:ProductsService,private activatedRoute:ActivatedRoute) {
     config.max=1;
@@ -23,6 +33,12 @@ export class ProductsComponent implements OnInit {
  
   
   ngOnInit(): void {
+    this.disc5 = false;
+    this.disc10  = false;
+    this.disc20  = false;
+    this.disc30  = false;
+    this.disc40  = false;
+    this.disc50  = false;
     this.getallProducts();
     this.getallProductsbycategory();
     
@@ -92,21 +108,54 @@ chairFilter(){
   })
 }
 
-isFilterApplied(){
-  if(this.apiUrl.includes('?')){
-    this.apiUrl = this.apiUrl + "&";
-  }else{
-    this.apiUrl = this.apiUrl + "?";
+removeDiscFilter(discountPercent:string){
+  this.apiUrl = this.apiUrl.replace('discount='+discountPercent,'');
+  this.apiUrl = this.apiUrl.includes('discount') ? this.apiUrl : this.apiUrl.replace('?','');
+  this.apiUrl = this.apiUrl.includes('discount') ? this.apiUrl : this.apiUrl.replace('&','');
+}
+
+applyDiscFilter(discountPercent:string){
+  this.apiUrl = this.apiUrl.includes('?') ? this.apiUrl+"&" : this.apiUrl  + "?";
+  this.apiUrl = this.apiUrl + "discount=" + discountPercent ;
+}
+
+checkBoxAction(item:string){
+  switch(item){
+    case '5':
+      this.disc5 = !this.disc5;
+      this.disc5 ? this.applyDiscFilter(item) : this.removeDiscFilter(item);
+      break;
+    case '10':
+      this.disc10 = !this.disc10;
+      this.disc10 ? this.applyDiscFilter(item) : this.removeDiscFilter(item);
+      break;
+      case '20':
+        this.disc20 = !this.disc20;
+        this.disc20 ? this.applyDiscFilter(item) : this.removeDiscFilter(item);
+        break;
+        case '30':
+          this.disc30 = !this.disc30;
+          this.disc30 ? this.applyDiscFilter(item) : this.removeDiscFilter(item);
+          break;
+          case '40':
+            this.disc40 = !this.disc40;
+            this.disc40 ? this.applyDiscFilter(item) : this.removeDiscFilter(item);
+            break;
+            case '50':
+              this.disc50 = !this.disc50;
+              this.disc50 ? this.applyDiscFilter(item) : this.removeDiscFilter(item);
+                    
   }
 }
-discFilter(discountPercent: string){
 
-  console.log(this.disc5);
-  this.isFilterApplied();
-  this.apiUrl = this.apiUrl + "discount=" + discountPercent + "%";
+discFilter(discountPercent: string){
+  this.checkBoxAction(discountPercent);
+  console.log(this.disc5, this.disc10,this.disc20,this.disc30,this.disc40,this.disc50, this.apiUrl);
+  
   this.productService.getProductsByFilter(this.apiUrl).subscribe(
-    (response) => {
+    (response:any) => {
       console.log(response);
+      this.productList = response;
     },
     err => {
       console.log(err);

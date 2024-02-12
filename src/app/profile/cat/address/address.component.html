@@ -5,30 +5,30 @@
     font-size: medium;" (click)="clickAddress()"> + ADD A NEW ADDRESS</h6><br>
     <div *ngIf="screen1" class="container"><div class="input1" class="row mt-2">
         <div class="col">
-            <input type="text" class="form-control" name="name" placeholder="Name">
+            <input type="text" class="form-control" name="name" placeholder="Name" [(ngModel)]="Name">
         </div>
         <div class="col">
-            <input type="number" class="form-control" name="number" placeholder="Mobile Number">
+            <input type="number" class="form-control" name="number" placeholder="Mobile Number" [(ngModel)]="PhoneNo">
         </div>
     </div>
     <div class="input1" class="row mt-4">
         <div class="col">
-            <input type="text" class="form-control" name="locality" placeholder="Locality">
+            <input type="text" class="form-control" name="locality" placeholder="Locality" [(ngModel)]="locality">
         </div>
         <div class="col">
-            <input type="number" class="form-control" name="pin" placeholder="Pincode">
+            <input type="number" class="form-control" name="pin" placeholder="Pincode" [(ngModel)]="Pincode">
         </div>
     </div>
     <div class="input1" class="row mt-4">
-        <div class="col"><textarea placeholder="Address"></textarea></div></div>
+        <div class="col"><textarea placeholder="Address" [(ngModel)]="Address" ></textarea></div></div>
        
     <div class="input1" class="row mt-4">
         <div class="col">
-            <input type="text" class="form-control" name="locality" placeholder="City/Town/District">
+            <input type="text" class="form-control" name="locality" placeholder="City/Town/District" [(ngModel)]="district" >
         </div>
         <div class="col">
             
-            <select name="State" id="State">
+            <select name="State" id="State" [(ngModel)]="state">
                 <option >Choose a State</option>
                 <option value="Tamilnadu">Tamilnadu</option>
                 <option value="Kerala"> Kerala</option>
@@ -40,13 +40,34 @@
         <div class="col mt-2"><label>Address type</label><br><br>
    
     
-    <input type="radio"  name="address" value="home">
+    <input type="radio"  name="address" value="home" [(ngModel)]="address_type">
   <label for="home">Home</label><br>
-  <input type="radio"  name="address" value="office">
+  <input type="radio"  name="address" value="office" [(ngModel)]="address_type">
   <label for="css">Office</label><br>
 </div>
 </div>
     <div class="row mt-4">
-        <div class="col"><input type="button" name="save" class="btn btn-info" value="Save"></div>
-       <input type="button" id="btn1" name="cancel" class="btn  " value="Cancel"></div>
+        <div class="col"><input type="button" name="save" class="btn btn-info" value="Save"  (click)="showAddress()" ></div>
+       <input type="button" id="btn1" name="cancel" class="btn  " value="Cancel" (click)="clearAddress()"></div>
 </div>
+<div class="row mt-4" *ngIf="this.screen2">
+    <div class="col-3">
+          <p>{{Name}}</p>
+          <p>{{PhoneNo}}</p>
+    </div>
+    <div class="col-3">
+        <p>{{locality}}</p>
+        <p>{{Pincode}}</p>
+      
+  </div>
+  <div class="col-3">
+    <p>{{Address}}</p>
+    <p>{{district}}</p>
+  </div>
+  <div class="col-3">
+    <p>{{state}} </p>
+    <p>{{address_type}} </p>
+    
+  </div>
+</div>
+

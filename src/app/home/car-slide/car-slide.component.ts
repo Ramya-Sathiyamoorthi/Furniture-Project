@@ -7,17 +7,27 @@ import { ProductsService } from 'src/app/service/products.service';
   styleUrls: ['./car-slide.component.scss']
 })
 export class CarSlideComponent implements OnInit {
-  constructor (private product:ProductsService){}
+  constructor ( private productService : ProductsService){}
   ngOnInit(): void {
-    this.preDeals()
-    
+    this.PremiumDeals();
+    this.BestDeals();
   }
 productlist:any[]=[];
-preDeals(){
-  this.product.premDeal().subscribe((result:any)=>{
-    this.productlist=result;
-    console.log(this.productlist);
+productlist1:any[]=[];
+
+PremiumDeals(){
+  this.productService.preFilter().subscribe((result:any)=>{
+    this.productlist=result
+    console.log(this.productlist)
   })
 }
-  
+
+BestDeals(){
+  this.productService.bestFilter().subscribe((result:any)=>{
+    this.productlist1=result
+    console.log(this.productlist1);
+  })
+}
+
+
 }

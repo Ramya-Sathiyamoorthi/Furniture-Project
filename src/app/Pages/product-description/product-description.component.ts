@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductsService } from 'src/app/service/products.service';
 import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
-
+import { CartService } from 'src/app/service/cart.service';
 
 @Component({
   selector: 'app-product-description',
@@ -12,10 +12,13 @@ import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 export class ProductDescriptionComponent implements OnInit {
   
   productData:any=[];
-  constructor(config: NgbRatingConfig,private product:ProductsService, private activatedroute:ActivatedRoute){
+  constructor(config: NgbRatingConfig,private product:ProductsService,private cartservice:CartService, private activatedroute:ActivatedRoute, private router:Router){
     config.max=5;
     config.readonly =true;
   }
+  showAdd:boolean=true;
+  removeAdd:boolean=false;
+
   ngOnInit(): void {
 this.getelementsbyid();
   }
@@ -26,14 +29,16 @@ productId && this.product.getproductbyid(productId).subscribe((result:any)=>{
 this.productData=result;
 console.log(this.productData)
   })
-    
-}
   
-  quantity:number=1;
-  increase(){
-   this.quantity+=1
-  }  
-  decrease(){
-   this.quantity-=1
-  }  
 }
+addtoCart(){
+  if (this.productData){
+    console.log(this.productData);
+  }
+}
+buyNow(){ 
+  this.router.navigateByUrl('/cart');
+}}
+
+
+

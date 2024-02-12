@@ -5,128 +5,82 @@
       <ng-template ngbSlide>
           <div class="picsum-img-wrapper">
               <div class="card-group">
-                  <div id="apple" class="card">
+                  <div id="apple" class="card"  routerLink="/individualPro/{{productlist[0].id}}"  >
                     <img id="com" [src]="productlist[0].picture"  class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">{{productlist[0].name}}</h5>
-                      <p class="card-text">{{productlist[0].shortdes}}</p>
+                      <h5 class="card-title">{{productlist[0].brandname}}</h5>
+                      <p class="card-text">{{productlist[0].name}}</p>
                       <p class="card-text"><small class="text-muted">Grap Soon!!!</small></p>
                     </div>
                   </div>
-                  <div id="apple" class="card">
-                    <img id="com" src="assets/Images/chair/chair.1.jpg"  class="card-img-top" alt="...">
+                  <div id="apple" class="card"  routerLink="/individualPro/{{productlist[1].id}}" >
+                    <img id="com" [src]="productlist[1].picture"  class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <h5 class="card-title">{{productlist[1].brandname}}</h5>
+                      <p class="card-text">{{productlist[1].name}}</p>
+                      <p class="card-text"><small class="text-muted">Grap Soon!!!</small></p>
                     </div>
                   </div>
-                  <div id="apple" class="card">
-                    <img id="com" src="assets/Images/dinning (1).jpg"  class="card-img-top" alt="...">
+                  <div id="apple" class="card" routerLink="/individualPro/{{productlist[2].id}}">
+                    <img id="com"[src]="productlist[2].picture"  class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <h5 class="card-title">{{productlist[2].brandname}}</h5>
+                      <p class="card-text">{{productlist[2].name}}</p>
+                      <p class="card-text"><small class="text-muted">Grap Soon!!!</small></p>
                     </div>
                   </div>
-                  <div id="apple" class="card">
-                      <img id="com" src="assets/Images/sofa (1).jpg"  class="card-img-top" alt="...">
+                  <div id="apple" class="card"  routerLink="/individualPro/{{productlist[3].id}}">
+                      <img id="com" [src]="productlist[3].picture"  class="card-img-top" alt="...">
                       <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <h5 class="card-title">{{productlist[3].brandname}}</h5>
+                        <p class="card-text">{{productlist[3].name}}</p>
+                        <p class="card-text"><small class="text-muted">Grap Soon!!!</small></p>
                       </div>
                     </div>
-                </div>
-
-
-
+                  </div>
 
           </div>
         
-      </ng-template>
+      </ng-template> 
       <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-             
-  
+       <div class="picsum-img-wrapper">
               <div class="card-group">
-                  <div id="apple" class="card">
-                    <img id="com" src="assets/Images/swing (1).jpg"  class="card-img-top" alt="...">
+                  <div id="apple" class="card"  routerLink="/individualPro/{{productlist[4].id}}">
+                    <img id="com" [src]="productlist[4].picture"  class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <h5 class="card-title">{{productlist[4].brandname}}</h5>
+                      <p class="card-text">{{productlist[4].name}}</p>
+                      <p class="card-text"><small class="text-muted">Grap Soon!!!</small></p>
                     </div>
                   </div>
-                  <div id="apple" class="card">
-                    <img id="com" src="assets/Images/chair/chair.1.jpg"  class="card-img-top" alt="...">
+                  <div id="apple" class="card"  routerLink="/individualPro/{{productlist[5].id}}">
+                    <img id="com" [src]="productlist[5].picture"  class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <h5 class="card-title">{{productlist[5].brandname}}</h5>
+                      <p class="card-text">{{productlist[5].name}}</p>
+                      <p class="card-text"><small class="text-muted">Grap Soon!!!</small></p>
                     </div>
                   </div>
-                  <div id="apple" class="card">
-                    <img id="com" src="assets/Images/swing/swing.3.jpg"  class="card-img-top" alt="...">
+                  <div id="apple" class="card"  routerLink="/individualPro/{{productlist[6].id}}">
+                    <img id="com"[src]="productlist[6].picture"  class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <h5 class="card-title">{{productlist[6].brandname}}</h5>
+                      <p class="card-text">{{productlist[6].name}}</p>
+                      <p class="card-text"><small class="text-muted">Grap Soon!!!</small></p>
                     </div>
                   </div>
-                  <div id="apple" class="card">
-                      <img id="com" src="assets/Images/chair/chair.5.jpg"  class="card-img-top" alt="...">
+                  <div id="apple" class="card"  routerLink="/individualPro/{{productlist[7].id}}">
+                      <img id="com" [src]="productlist[7].picture"  class="card-img-top" alt="...">
                       <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <h5 class="card-title">{{productlist[7].brandname}}</h5>
+                        <p class="card-text">{{productlist[7].name}}</p>
+                        <p class="card-text"><small class="text-muted">Grap Soon!!!</small></p>
                       </div>
                     </div>
-            </div>
+                  </div>
 
           </div>
-      </ng-template>
-      <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            
- 
-              <div class="card-group">
-                  <div id="apple" class="card">
-                    <img id="com" src="assets/Images/chair/chair.2.jpg"  class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div id="apple" class="card">
-                    <img id="com" src="assets/Images/dinning/dinning.3.jpg"  class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div id="apple" class="card">
-                    <img id="com" src="assets/Images/chair/chair.3.jpg"  class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div id="apple" class="card">
-                      <img id="com" src="assets/Images/swing/swing.3.jpg"  class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                      </div>
-                    </div>
-                </div>
-
-          </div>
-          
+        
       </ng-template>
   </ngb-carousel>
   </div>
@@ -139,124 +93,43 @@
               <div class="picsum-img-wrapper">
                   
                   <div class="card-group">
-                      <div id="apple" class="card">
-                        <img id="com" src="assets/Images/bed/bed.4.jpg"  class="card-img-top" alt="...">
+                      <div id="apple" class="card"  routerLink="/individualPro/{{productlist1[0].id}}">
+                        <img id="com" [src]="productlist1[0].picture"  class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          <h5 class="card-title">{{productlist1[0].brandname}}</h5>
+                          <p class="card-text">{{productlist1[0].name}}</p>
+                          <p class="card-text"><small class="text-muted">Grap Soon!!!</small></p>
                         </div>
                       </div>
-                      <div id="apple" class="card">
-                        <img id="com" src="assets/Images/chair/chair.1.jpg"  class="card-img-top" alt="...">
+                      <div id="apple" class="card" routerLink="/individualPro/{{productlist1[1].id}}">
+                        <img id="com"[src]="productlist1[1].picture" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          <h5 class="card-title">{{productlist1[1].brandname}}</h5>
+                          <p class="card-text">{{productlist1[1].name}}</p>
+                          <p class="card-text"><small class="text-muted">Grap Soon!!!</small></p>
                         </div>
                       </div>
-                      <div id="apple" class="card">
-                        <img id="com" src="assets/Images/dinning/dinning.1.jpg"  class="card-img-top" alt="...">
+                      <div id="apple" class="card" routerLink="/individualPro/{{productlist1[2].id}}">
+                        <img id="com" [src]="productlist1[2].picture"  class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          <h5 class="card-title">{{productlist1[2].brandname}}</h5>
+                          <p class="card-text">{{productlist1[2].name}}</p>
+                          <p class="card-text"><small class="text-muted">Grap Soon!!!</small></p>
                         </div>
                       </div>
-                      <div id="apple" class="card">
-                          <img id="com" src="assets/Images/sofa (1).jpg"  class="card-img-top" alt="...">
+                      <div id="apple" class="card" routerLink="/individualPro/{{productlist1[3].id}}">
+                          <img id="com" [src]="productlist1[3].picture"  class="card-img-top" alt="...">
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <h5 class="card-title">{{productlist1[3].brandname}}</h5>
+                            <p class="card-text">{{productlist1[3].name}}</p>
+                            <p class="card-text"><small class="text-muted">Grap Soon!!!</small></p>
                           </div>
                         </div>
                     </div>
               </div>
              
           </ng-template>
-          <ng-template ngbSlide>
-              <div class="picsum-img-wrapper">
-                 
-      
-                  <div class="card-group">
-                      <div id="apple" class="card">
-                        <img id="com" src="assets/Images/swing/swing.1.jpg"  class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                      </div>
-                      <div id="apple" class="card">
-                        <img id="com" src="assets/Images/chair/chair.4.jpg"  class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                      </div>
-                      <div id="apple" class="card">
-                        <img id="com" src="assets/Images/dinning/dinning.2.jpg"  class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                      </div>
-                      <div id="apple" class="card">
-                          <img id="com" src="assets/Images/chair/chair.2.jpg"  class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                          </div>
-                        </div>
-                    </div>
-  
-              </div>
-              
-          </ng-template>
-          <ng-template ngbSlide>
-              <div class="picsum-img-wrapper">
-                
-     
-                  <div class="card-group">
-                      <div id="apple" class="card">
-                        <img id="com" src="assets/Images/sofa (1).jpg"  class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                      </div>
-                      <div id="apple" class="card">
-                        <img id="com" src="assets/Images/dinning/dinning.3.jpg"  class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                      </div>
-                      <div id="apple" class="card">
-                        <img id="com" src="assets/Images/chair/chair.3.jpg"  class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                      </div>
-                      <div id="apple" class="card">
-                          <img id="com" src="assets/Images/swing/swing.3.jpg"  class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                          </div>
-                        </div>
-                    </div>
-              </div>
-          </ng-template>
+         
       </ngb-carousel>
       </div>
       <hr>

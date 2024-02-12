@@ -5,31 +5,32 @@
   <div class="container-fluid">
     <div class="row g-0 mt-2">
         <div id="left" class="col-sm-5 col-md-2">
+          
            
     
               <h2 id="fil"><b>Filters</b></h2>
               <h5 id="cat"><b>Categories</b></h5>
-              <h6 id="hd" (click)="getallProducts()"> All</h6>
+              <h6 id="hd1" (click)="getallProducts()"> All</h6>
 
-              <h6 id="hd" (click)="sofaFilter()"> Sofa</h6>
-              <h6 id="hd" (click)="bedFilter()">Bed</h6>
-              <h6 id="hd" (click)="chairFilter()">Chair</h6>
-              <h6 id="hd" (click)="babyFilter()">Baby Furniture</h6>
-              <h6 id="hd" (click)="cupboardFilter()">Cupboard</h6>
+              <h6 id="hd2" (click)="sofaFilter()"> Sofa</h6>
+              <h6 id="hd3" (click)="bedFilter()">Bed</h6>
+              <h6 id="hd4" (click)="chairFilter()">Chair</h6>
+              <h6 id="hd5" (click)="babyFilter()">Baby Furniture</h6>
+              <h6 id="hd6" (click)="cupboardFilter()">Cupboard</h6>
 
-              <h6 id="hd" (click)="swingFilter()"> Swing</h6>
-              <h6 id="hd" (click)="tableFilter()"> Table</h6>
+              <h6 id="hd7" (click)="swingFilter()"> Swing</h6>
+              <h6 id="hd8" (click)="tableFilter()"> Table</h6>
               <hr><hr>
               <h2 id="fil"><b>Discount</b></h2>
               
-              <input id="disc5" type="checkbox" formControlName="disc5" name="5%" (click)="discFilter('5')"  ><label> - 5%</label><br>
+              <input id="disc5" type="checkbox" name="5" [checked]="disc5" (click)="discFilter('5')" ><label> - 5%</label><br>
 
-              <input id="disc10" type="checkbox" value="70%"><label> - 10%</label><br>
-              <input id="disc20" type="checkbox" value="60%"><label> - 20%</label><br>
+              <input id="disc10" type="checkbox" [checked]="disc10" value="70" (click)="discFilter('10')"><label> - 10%</label><br>
+              <input id="disc20" type="checkbox" [checked]="disc20" value="60" (click)="discFilter('20')"><label> - 20%</label><br>
 
-              <input id="disc30" type="checkbox" value="30%"><label> - 30%</label><br>
-              <input id="disc40" type="checkbox" value="40%"><label> - 40%</label><br>
-              <input id="disc50" type="checkbox" value="50%"><label> - 50%</label><br>
+              <input id="disc30" type="checkbox" [checked]="disc30" value="30" (click)="discFilter('30')" ><label> - 30%</label><br>
+              <input id="disc40" type="checkbox" [checked]="disc40" value="40" (click)="discFilter('40')" ><label> - 40%</label><br>
+              <input id="disc50" type="checkbox" [checked]="disc50" value="50" (click)="discFilter('50')" ><label> - 50%</label><br>
               <hr><hr>
               <h2 id="fil"><b>Price</b></h2>
               
@@ -68,10 +69,10 @@
                 <p class="card-text">{{product.shortdes}}</p>
                 <span id="sev" class="text-light ">{{product.ratings}}<b><ngb-rating  [rate]="3" /></b> </span>   <i id="heart" class="ri-heart-line"></i>         
                 <p id="last"><b class="text-dark" style="text-decoration: line-through;">{{product.price|currency:'INR'}}</b></p>
-                <p><b style="margin-left: 1%; color: green;">{{product.discount}}</b> <span style="margin-left: 10%;">{{product.disAcc|currency:'INR'}}</span></p>
+                <p><b style="margin-left: 1%; color: green;">{{product.discount}}%</b> <span style="margin-left: 10%;">{{product.disAcc|currency:'INR'}}</span></p>
               </div>             
             </div></div><div></div></div>
            
                 
-</div></div></div></div></div>
-         
+</div></div></div></div></div><br><br>
+         <app-about></app-about>
