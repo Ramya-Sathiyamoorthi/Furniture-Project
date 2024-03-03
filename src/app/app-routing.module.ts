@@ -8,6 +8,7 @@ import { ProfileComponent } from './Pages/profile/profile.component';
 import { ProductDescriptionComponent } from './Pages/product-description/product-description.component';
 import { ProductsComponent } from './Pages/products/products.component';
 import { AddtoCartComponent } from './Pages/addto-cart/addto-cart.component';
+import { OrderPageComponent } from './Pages/order-page/order-page.component';
 
 const routes: Routes = [
   {path :"login",component:LoginComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path :"product/:category", component:ProductsComponent},
   {path :"individualPro/:productId", component:ProductDescriptionComponent},
   {path : "product" , component:ProductsComponent},
-  {path :"cart",component:AddtoCartComponent}
+  {path :"cart",component: AddtoCartComponent},
+  {path :"order",component:OrderPageComponent}
   
 ];
 

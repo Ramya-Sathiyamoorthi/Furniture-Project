@@ -25,6 +25,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { ProductsComponent } from './Pages/products/products.component';
 
 import { AddtoCartComponent } from './Pages/addto-cart/addto-cart.component';
+import { OrderPageComponent } from './Pages/order-page/order-page.component';
 
 
 
@@ -49,6 +50,7 @@ import { AddtoCartComponent } from './Pages/addto-cart/addto-cart.component';
     ProductsComponent,
   
     AddtoCartComponent,
+       OrderPageComponent,
    
    
   ],

@@ -11,34 +11,51 @@ import { CartService } from 'src/app/service/cart.service';
 })
 export class ProductDescriptionComponent implements OnInit {
   
+
   productData:any=[];
+  showadd:boolean=true;
+  showremove:boolean=false;
+item: any;
+  products: any;
   constructor(config: NgbRatingConfig,private product:ProductsService,private cartservice:CartService, private activatedroute:ActivatedRoute, private router:Router){
     config.max=5;
     config.readonly =true;
   }
-  showAdd:boolean=true;
-  removeAdd:boolean=false;
+ 
 
   ngOnInit(): void {
-this.getelementsbyid();
+    this.getelementsbyid();
   }
-getelementsbyid(){
-  let productId=this.activatedroute.snapshot.paramMap.get('productId');
-console.log(productId);
-productId && this.product.getproductbyid(productId).subscribe((result:any)=>{
-this.productData=result;
-console.log(this.productData)
-  })
-  
-}
-addtoCart(){
-  if (this.productData){
-    console.log(this.productData);
+  getelementsbyid(){
+    let productId=this.activatedroute.snapshot.paramMap.get('productId');
+  console.log(productId);
+  productId && this.product.getproductbyid(productId).subscribe((result:any)=>{
+  this.productData=result;
+  console.log(this.productData)
+    })
+      
   }
+    
+    quantity:number=1;
+    increase(){
+     this.quantity+=1
+    }  
+    decrease(){
+     this.quantity-=1
+    }  
+
+addtocart(productdata:any){
+  this.showadd=false;
+  this.showremove=true;
+  this.product.addtocart(productdata);
+ 
 }
-buyNow(){ 
-  this.router.navigateByUrl('/cart');
-}}
+removeitem(productdata:any){
+  this.showadd=true;
+  this.showremove=false;
+  this.product.removecartitem(productdata);
+}
+}
 
 
 

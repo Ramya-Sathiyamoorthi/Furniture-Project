@@ -93,6 +93,19 @@ export class ProductsService {
  })
  this.productlist.next(this.cartitemlist)
  }
+
+ calcluateprice(){
+  let total =0;
+  this.cartitemlist.map((a:any)=>{
+    total +=a.disAcc;
+  })
+  return total;
+}
+//remove all item
+removeallitem(){
+  this.cartitemlist =[];
+  this.productlist.next(this.cartitemlist);
+}
 }
 
 
